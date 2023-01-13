@@ -1,0 +1,3 @@
+dynamic a = "9a0";
+  a=90;
+  print(a);

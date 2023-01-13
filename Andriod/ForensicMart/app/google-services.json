@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "492825547084",
+    "firebase_url": "https://forensicmart-n.firebaseio.com",
+    "project_id": "forensicmart-n",
+    "storage_bucket": "forensicmart-n.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492825547084:android:376fbd57e55d02d568bfe9",
+        "android_client_info": {
+          "package_name": "com.forensic.mart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492825547084-itvi7t5rvg4m52ekcblfc21s5ft2qtf6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhz72LM2VWZo0bm1TJN89x1eYW2GQAtp8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492825547084-itvi7t5rvg4m52ekcblfc21s5ft2qtf6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

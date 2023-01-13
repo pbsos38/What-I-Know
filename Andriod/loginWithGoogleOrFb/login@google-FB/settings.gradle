@@ -1,0 +1,2 @@
+rootProject.name='login@google-FB'
+include ':app'

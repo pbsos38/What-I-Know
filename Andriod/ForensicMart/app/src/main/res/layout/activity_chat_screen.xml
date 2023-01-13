@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    tools:context="com.forensic.mart.ChatSystem.ChatScreen">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_Chats_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <!--<ImageView
+        android:id="@+id/no_data_available_image_Chats_screen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/no_chat_available"
+        android:visibility="gone"/>-->
+
+    <ImageView
+        android:id="@+id/no_chat_tex_Chats_screent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="No Chats yet"
+        android:visibility="gone"/>
+
+<!--
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="50dp"
+        android:layout_weight="1"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        />-->
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/apptheme_color"
+        android:focusableInTouchMode="true"
+        android:gravity="bottom"
+        android:paddingBottom="10dp"
+        android:layout_weight="-1"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        >
+
+        <!--<ImageView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="4"
+            android:padding="4dp"
+            android:onClick="Attach_file"
+            android:src="@drawable/attachment_chat" />-->
+
+        <EditText
+            android:id="@+id/type_msg_Chats_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Write a message..."
+            android:maxHeight="80dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#CFD8DC"
+            android:layout_marginStart="30dp"
+            android:textColorHint="#CFD8DC" />
+
+        <ImageView
+            android:id="@+id/btn_send_Chats_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:padding="10dp"
+            android:onClick="Send_message"
+            android:src="@drawable/ic_baseline_send_24" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

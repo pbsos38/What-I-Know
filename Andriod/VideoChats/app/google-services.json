@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "828475978356",
+    "firebase_url": "https://videochats-ef2d6.firebaseio.com",
+    "project_id": "videochats-ef2d6",
+    "storage_bucket": "videochats-ef2d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828475978356:android:ea0aebacdac718acae5721",
+        "android_client_info": {
+          "package_name": "com.example.videochats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828475978356-tpm9bm42no20bn8gshp4oahabpo063aq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRDRJXWbQiS28HJHKAL8Ekiy-4UfYBHLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828475978356-tpm9bm42no20bn8gshp4oahabpo063aq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

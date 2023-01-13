@@ -1,0 +1,5 @@
+WHERE Clause Example
+The following SQL statement selects all the customers from the country "Mexico", in the "Customers" table:
+
+SELECT * FROM Customers
+WHERE Country='Mexico';

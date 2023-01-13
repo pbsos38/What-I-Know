@@ -1,0 +1,4 @@
+SELECT * FROM employees where salary >2000 AND id >2;
+
+
+SELECT * FROM employees where salary >2000 or id >2;

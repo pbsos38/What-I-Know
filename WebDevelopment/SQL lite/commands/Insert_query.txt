@@ -1,0 +1,1 @@
+INSERT INTO employees (ID,NAME,SALARY) VALUES (1, 'jack' ,2000)

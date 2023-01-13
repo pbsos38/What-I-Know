@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "492298613098",
+    "project_id": "dfsl-c6b93",
+    "storage_bucket": "dfsl-c6b93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492298613098:android:03754b6d092a3ab9223513",
+        "android_client_info": {
+          "package_name": "com.forensicmart.dfsl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492298613098-75odmffqebu14grr590h59mqbgb9912b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6tfwOWZQ08syW3U67KZVdljDzYlXhCqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492298613098-75odmffqebu14grr590h59mqbgb9912b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

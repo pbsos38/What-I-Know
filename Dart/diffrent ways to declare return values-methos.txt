@@ -1,0 +1,5 @@
+String type1(){
+  return 'prince';
+}
+
+String type2() => 'Bansal';

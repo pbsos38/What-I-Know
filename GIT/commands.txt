@@ -1,0 +1,69 @@
+$ git config --global  user.name "Prince"
+$ git config --global  user.email "pbsos38@gmail.com"
+$ git config --list
+git status
+git init # to create a git directory
+git add --a  or git add . /// To add all the files for commit
+git commit -m "Intitial Commit" /// so that changes can take place with some explanation or msg
+git log /// to check log for all the edits
+NOTE: after running a log command there will be sha key which provides the authentication for files and in case someone made any minor modification to any of those files then sha key will be changed.
+git log -p // 
+git log --stat// only shows name of file which were changed
+git log --pretty=oneline// this will print sha key with commit messages
+git log --pretty=short//
+git log --pretty=long//
+git log --since=2.days//
+Some other options are also available at https://git-scm.com/docs/git-log
+git add {filename.extension}  
+rm -rf .git /// try avoiding this as this will remove all the files 
+git .gitignore // in htis we will add some files which can be ignored for updating/tracking basically this is a txt doc and in this we will write aa the fie names to be ignored
+git diff // this will bring out all the difference between previous version and new version of files before committing
+git diff --staged // this will bring all the difference bw the files after staging( git add --a)
+git commit -a -m "anything relevent" // this will skip the staging process and updates all the files which are already commited
+git rm {filename.extension} // with this we can avoid staging process else if we are removing the file with GI then we to complete the staging process
+git mv {filename.extension} // same as above 
+git rm --cached {filename.extension} // Earlier we said that we can ignore the files from updating by adddig the file but incase we are already tracking file then we add name to .gitignore then this will stop tracking a specific file from future	
+git commit --amend // this will allow us to add the comments to commit msg which may be already published by someone already. and to edit we have to press i now write anything and press : then w then q to quit
+git restore --staged {filename.extension} // this will unstage a file
+git checkout -- {filename.extension} // this will restore file from previous version OR this will replace content with previous version of file
+git checkout -f // this will replace all the current file with the files from last commit	
+
+
+
+// to push a repository into git project 
+git remote add origin git@github.com:pbsos38/Learning_git
+git remote
+origin
+git remote -v
+git push -u origin master
+// now if in case you are denied to puch then open profile settings and go to ssh and gpg keys and click on add ssh keys
+// write any name and the come back to git terminal and paste
+ssh-keygen -t ed25519 -C "your_email@example.com"
+//press enter*3
+tail /c/users/prince/.ssh/id_ed25519.pub
+// copy the whole output for this and paste in browser
+
+
+// setting up an alias( short commands for an original commands) But original commands will be there 
+git config --global alias.st status // from this git status will be replaced by git st 
+ 
+
+//Branching
+git branch // this will provide a list of all branches available 
+git branch -v// this will bring a list of all branches available along with commit hash and message
+git branch --merged // all branches which has been merged
+git  branch --no-merged // all branched which has not been merged yet
+git checkout -b {BranchName} // this will add a branch 
+git checkout {branchName} // this will switch to commanded branch
+git merge {branchName to be merged}// this will merge the content of written branch name to the master branch
+
+git branch -d develop // this will delete a branch (with an error if it has not been merged yet)
+git branch -D develop // this will delete a branch (with no error)
+git push origin {branchName} // to push a branch in server
+git push origin --delete {branchName} // this will delete a remote branch from server
+git push origin {branchName}:{branchName2} // pushing a branch to other branch
+
+
+
+Copy: Ctrl + Ins
+Paste: Shift + Ins

@@ -1,0 +1,3 @@
+SELECT * FROM employees CROSS JOIN EMPLOYEES_WITH_CAR;
+
+used to join 2 columns with each possibility

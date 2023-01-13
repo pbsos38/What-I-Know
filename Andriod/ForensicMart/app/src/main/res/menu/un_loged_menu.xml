@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/unLogged_menu_events"
+            android:icon="@drawable/ic_event_24"
+            android:title="Events" />
+        <item
+            android:id="@+id/unLogged_menu_services"
+            android:icon="@drawable/ic_service_24"
+            android:title="Our Services" />
+        <item
+            android:id="@+id/unLogged_menu_faqs"
+            android:icon="@drawable/ic_faqs_24"
+            android:title="FAQ's" />
+
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/unLogged_menu_TAndC"
+                android:icon="@drawable/ic_conditions_24"
+                android:title="Terms And Condition" />
+
+            <item
+                android:id="@+id/unLogged_menu_privacy"
+                android:icon="@drawable/ic_privacy_18dp"
+                android:title="Privacy Policy" />
+            <item
+                android:id="@+id/unLogged_menu_contactUs"
+                android:icon="@drawable/ic_contact_support_24"
+                android:title="Contact Us" />
+            <item
+                android:id="@+id/unLogged_menu_aboutUs"
+                android:icon="@drawable/ic_about_us_24px"
+                android:title="About us" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,13 @@
+Before procceding we  have to start cmd in database location
+
+to chk installation: sqlite3
+
+to quit: .quit
+
+to create database: sqlite3 "databasename".sqlite    or   sqlite3 "databasename".db
+
+to show your table in directry: .databases 
+
+to chk all tables: .tables
+
+to chk query : .shcema

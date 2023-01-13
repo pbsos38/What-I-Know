@@ -1,0 +1,4 @@
+open powershell at specific path and run command "npx create-react-app my-app" 
+
+NOTE:- Here we have used npx because this helps in creating one time use application where as We have used npm while 
+learning nodejs and npm helps in installing application over the whole system.

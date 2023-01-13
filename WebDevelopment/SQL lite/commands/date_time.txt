@@ -1,0 +1,21 @@
+SELECT DATE('NOW');
+ 
+SELECT DATETIME('NOW');
+
+seconds
+SELECT STRFTIME('%S','NOW');
+
+date
+SELECT STRFTIME('%d','NOW');
+
+current hour
+SELECT STRFTIME('%H','NOW');
+
+no of present day out of 365
+SELECT STRFTIME('%j','NOW');
+
+minute
+SELECT STRFTIME('%m','NOW');
+
+whole date
+SELECT STRFTIME('%d/%m/%Y','NOW');

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:maxHeight="600dp"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_comments_bottomsheet_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="8dp"
+        android:layout_weight="-1"
+        android:background="@color/apptheme_color"
+        android:focusableInTouchMode="true"
+        android:gravity="bottom"
+        android:layout_marginBottom="20sp"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <EditText
+            android:id="@+id/type_comment_bottomsheet_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1"
+            android:hint="Add a Comment..."
+            android:maxHeight="80dp"
+            android:textColor="#CFD8DC"
+            android:textColorHint="#CFD8DC"
+            tools:ignore="NestedWeights" />
+
+        <ImageView
+            android:id="@+id/btn_send__bottomsheet_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:onClick="Send_message"
+            android:padding="10dp"
+            android:src="@drawable/ic_baseline_send_24" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">languageTranslator</string>
+    <string name="detecting">Detecting</string>
+    <string name="source_text">Source Text</string>
+    <string name="translate">translate</string>
+    <string name="english">English</string>
+</resources>

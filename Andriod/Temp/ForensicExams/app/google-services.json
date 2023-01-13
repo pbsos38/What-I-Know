@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "606198451702",
+    "firebase_url": "https://forensic-exams.firebaseio.com",
+    "project_id": "forensic-exams",
+    "storage_bucket": "forensic-exams.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606198451702:android:948d963b3264c0c0790bd7",
+        "android_client_info": {
+          "package_name": "com.Prince.forensicexams"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "606198451702-adstjiuvuv1fhdhq1pak3dgldou6lren.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Jwjg8c0se9nT-A6StCHVlcm8kRbzBnc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "606198451702-adstjiuvuv1fhdhq1pak3dgldou6lren.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

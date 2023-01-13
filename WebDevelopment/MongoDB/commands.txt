@@ -1,0 +1,12 @@
+to run mongodb there are 2 steps
+1) to run database open a powershell terminal at "D:\programs\mongodb\bin" and run a command: ".\mongod.exe --dbpath D:\programs\mongodb\data\db"
+2) to connect mongodb to database open 2nd powershell terminal at same location and run mongo.exe // now we are connected to mongodb
+
+In 2nd terminal we are going to run commands
+
+show dbs // to get list of all databases
+use {dbName} // eg. use admin // this will switch to admin database if there is now database with that name then new db will be created
+
+////////collections == table of mysql /////////////////
+show collections // this will show all the table or collections inside the db	
+

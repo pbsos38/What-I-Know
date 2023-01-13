@@ -1,0 +1,9 @@
+ first time use 
+
+1) open cmd at C:\Program Files\MongoDB\Server\4.2\bin and run mongod.exe
+
+now says an error 2020-06-25T12:53:45.530+0530 I  STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory C:\data\db\ not found. Create the missing directory or specify another path using (1) the --dbpath command line option, or (2) by adding the 'storage.dbPath' option in the configuration file., terminating
+
+means no folder found in c:\data\db so now we create it
+
+2) now set an environment path for it

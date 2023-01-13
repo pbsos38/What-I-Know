@@ -1,0 +1,58 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/apptheme_color</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="modifiedEditText" parent="parent">
+        <item name="android:textSize">12sp</item>
+        <item name="android:backgroundTint">@color/apptheme_color</item>
+    </style>
+
+    <!--button-->
+
+    <style name="style_button" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="fontFamily">@font/yatra_one</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:background">@drawable/roundshapebtn</item>
+        <item name="cornerRadius">50dp</item>
+        <!--<item name="android:layout_weight">1</item>-->
+    </style>
+
+    <style name="justtext_blue" parent="parent">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="fontFamily">@font/yatra_one</item>
+        <item name="android:textColor">@color/apptheme_color</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_gravity">center</item>
+
+    </style>
+
+
+    <!--for sliders-->
+
+    <style name="tooltip" parent="Widget.MaterialComponents.Tooltip">
+        <item name="shapeAppearanceOverlay">@style/tooltipShOverylay</item>
+        <item name="backgroundTint">#0C0C0C</item>
+    </style>
+
+    <style name="tooltipShOverylay">
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

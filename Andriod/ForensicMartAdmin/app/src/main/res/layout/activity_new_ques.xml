@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Activities.NewQues"
+
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Question"
+        android:textStyle="bold"
+        android:layout_gravity="center|top"
+        android:gravity="center|top"
+        android:textSize="30dp"
+        android:textColor="@color/apptheme_color"
+        />
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:layout_weight="1"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tip:1) Make Sure Your question starts with first letter in capital."
+            android:layout_marginTop="20dp"
+            android:textStyle="italic"
+            android:layout_gravity="center|top"
+            android:textSize="15sp"
+            android:textColor="@color/apptheme_color"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tip:2) Make Sure Your question ends with ? or :- or __"
+            android:layout_marginTop="20dp"
+            android:textStyle="italic"
+            android:layout_gravity="center|top"
+            android:textSize="15sp"
+            android:textColor="@color/apptheme_color"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="20dp"
+            android:text="Choose Subject"
+            android:textColor="@color/apptheme_color"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="-Select Subject--">
+
+            <AutoCompleteTextView
+                android:id="@+id/filled_exposed_dropdown2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                tools:ignore="LabelFor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Question"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center|top"
+            android:textSize="20sp"
+            android:textColor="@color/apptheme_color"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_question_newQuestion"
+            android:hint="Enter Your Question Here"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option A"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center|top"
+            android:textSize="20sp"
+            android:textColor="@color/apptheme_color"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_optA_newQuestion"
+
+            android:hint="Enter Your Option A Here"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option B"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center|top"
+            android:textSize="20sp"
+            android:textColor="@color/apptheme_color"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_optB_newQuestion"
+            android:hint="Enter Your Option B Here"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option C"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center|top"
+            android:textSize="20sp"
+            android:textColor="@color/apptheme_color"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_optC_newQuestion"
+            android:hint="Enter Your Option C Here"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option D"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center|top"
+            android:textSize="20dp"
+            android:textColor="@color/apptheme_color"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_optD_newQuestion"
+            android:hint="Enter Your Option D Here"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Answer"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center|top"
+            android:textSize="20dp"
+            android:textColor="@color/apptheme_color"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="-Select Answer--">
+
+            <AutoCompleteTextView
+                android:id="@+id/filled_exposed_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                tools:ignore="LabelFor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Add"
+            style="@style/style_button"
+            android:layout_margin="30dp"
+            android:onClick="AddBtn"
+
+            />
+    </LinearLayout>
+
+</ScrollView>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_adunit_id">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>

@@ -1,0 +1,18 @@
+
+create database
+
+sqlite3 customers.db
+
+
+create table 
+
+create table employees (ID INT PRIMARY KEY NOT NULL,NAME TEXT NOT NULL,SALARY INT NOT NULL);
+
+to see all tables 
+
+.tables
+
+
+
+
+

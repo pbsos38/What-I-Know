@@ -1,0 +1,6 @@
+include the script of bootstrap in index.html of public dir.(It's recommended to include after body closing tags)
+
+Include css inside Head Tag of index.html page of public dir
+
+Note: Replace class with className and all single tag elements should be ended with />
+Eg. <hr> will now be written as <hr/>

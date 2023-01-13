@@ -1,0 +1,8 @@
+ /** 
+     * toString - create a String representation of the object
+     */
+    public String toString() {
+        String r = String.format ("[%10s %15d %10s %5d %30s %30s $%10.2f]", 
+             accountType, accountNumber, transactionDate, chequeNumber, description1, description2, cadAmount);
+        return r;
+    }

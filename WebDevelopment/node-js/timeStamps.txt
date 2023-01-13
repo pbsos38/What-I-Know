@@ -1,0 +1,98 @@
+
+
+
+00:00 Introduction
+2:32 What is Node.js?
+3:22 Client-Server Architecture
+4:12 Multi-Threaded Model
+6:13 Single-Threaded Model
+7:43 Multi-Threaded vs Event-Driven
+9:45 Uber Old Architecture
+11:10 Uber New Architecture
+12:30 What is Node.js?
+13:05 Sucess Stories
+14:20 Node.js Trend
+14:40 Node.js Features
+16:25 Node.js Installation
+16:50 Node.js First Example
+17:30 Blocking vs Non-blocking 
+18:50 Demo
+23:50 Node.js Modules
+   23:50 NPM
+   25:10 Global Objects
+   26:55 File System
+   30:30 Callbacks
+   31:45 Event
+   33:05 HTTP
+34:50 Hands On
+1:09:45 Node.js Tutorial
+1:10:45 What is Node.js?
+1:12:10 Features of Node.js
+1:13:00 Node.js Architecture
+1:14:55 NPM(Node Package Manager)
+1:16:20 Node.js Modules
+1:16:30 Node.js Modules Types
+    1:16:35 Core Modules
+    1:16:55 Local Modules
+    1:17:10 3rd Party Modules
+1:18:35 JSON File
+1:23:30 Data Types
+1:25:35 Variables
+1:26:40 Operators
+1:27:45 Functions
+1:29:10 Objects
+1:29:55 File Systems
+1:33:50 Events
+1:34:20 HTTP Module
+1:40:02 Events
+1:44:37 HTTP Module
+1:45:27 Creating a Web Server using Node.js
+1:45:42 Express.js
+1:46:57 Demo
+1:58:37 Node.js NPM Tutorial
+1:59:37 What is NPM?
+2:03:12 Main Functions of NPM
+2:04:27 Need For NPM
+2:08:07 NPM Packages
+2:17:42 NPM Installation
+2:18:12 JSON File
+2:31:32 Node.js Express Tutorial
+2:32:02 Introduction to Express.js
+2:32:32 Features of Express.js
+2:35:27 Getting Started with Express.js
+2:39:42 Routing Methods
+2:44:57 Hands-On
+2:48:12 Building RESTful API with Node.js
+2:48:27 What is REST API?
+2:49:42 Features of REST API
+2:51:12 Principles of REST API
+2:56:37 Methods of REST API
+2:59:52 Building REST API with Node.js
+3:24:07 Node.js MySQL Tutorial 
+3:24:32 What is MySQL?
+3:25:13 Advantages of Using MySQL with Node.js
+3:27:38 MySQL Installation
+3:44:23 Node.js MongoDB Tutorial
+3:44:58 What is NoSQL?
+3:47:53 NoSQL Databases
+3:48:38 Introduction to MongoDB
+3:52:48 Features of MongoDB
+3:53:03 MongoDB Installation
+4:36:08 Node.js Docker Tutorial
+4:36:38 What is Docker?
+4:39:13 Docker Working
+4:41:43 Docker Basics
+4:41:48 DockerFile
+4:42:03 Docker Images
+4:42:23 Docker Container
+4:44:38 Why use Node.js with Docker?
+4:45:18 Demo: Node.js with Docker
+4:58:38 MEAN Stack Application Tutorial
+4:59:18 What is MEAN Application?
+4:59:53 MongoDB
+5:00:28 Express
+5:01:13 Angular
+5:01:23 Node.js
+5:02:17 RESTful API
+5:03:02 Contact List MEAN App
+6:17:57 Node.js Interview Questions

@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Forensic Exams</string>
+
+    <!--old-->
+    <string name="admob_app_id_old">ca-app-pub-3692082932732255~5606890252</string>
+    <string name="admob_native_ad_old">ca-app-pub-3692082932732255/6645489817</string>
+    <string name="admob_banner_ad_old">ca-app-pub-3692082932732255/8835295618</string>
+    <string name="admob_test_banner_ad_old">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_new_banner_ad_old">ca-app-pub-3692082932732255/8116375197</string>
+    <string name="admob_interstitial_ad_old">ca-app-pub-3692082932732255/6942988817</string>
+    <!--new-->
+    <string name="admob_app_id">ca-app-pub-1519505533431268~6916189180</string>
+    <string name="admob_native_ad">ca-app-pub-1519505533431268/4262105686</string>
+    <string name="admob_native2_ad">ca-app-pub-1519505533431268/1619371648</string>
+    <string name="admob_native_ad_test">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="admob_banner_ad">ca-app-pub-1519505533431268/7462984098</string>
+    <string name="admob_test_banner_ad">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_interstitial_ad">ca-app-pub-1519505533431268/8084966473</string>
+    <!--//    <string name="admob_new_banner_ad"></string>-->
+    <string name="header_newComp">New Competition</string>
+    <string name="msg_newComp">Hey User. New Competition has been organised by someone. Please do check.</string>
+
+
+    <string name="forensic_chemistry_toxicology"><![CDATA[Forensic Chemistry & Toxicology]]></string>
+    <string name="forensic_ballistics_explosives"><![CDATA[Forensic Ballistics & Explosives]]></string>
+    <string name="text_fingerprints">Fingerprints</string>
+    <string name="text_criminal_investigation">Criminal Investigation</string>
+    <string name="text_facial">Facial</string>
+    <string name="text_digital_forensic">Digital Forensic</string>
+    <string name="text_forensic_biology_serology"><![CDATA[Forensic Biology & Serology]]></string>
+    <string name="text_cyber">Cyber</string>
+</resources>

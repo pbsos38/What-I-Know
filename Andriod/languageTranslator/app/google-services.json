@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "29821416659",
+    "firebase_url": "https://learning-phase-9750d.firebaseio.com",
+    "project_id": "learning-phase-9750d",
+    "storage_bucket": "learning-phase-9750d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29821416659:android:953728b8b9e95e73ca1026",
+        "android_client_info": {
+          "package_name": "com.example.firebase_cloud_messaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29821416659-vsjcqi8vdn6e57gcpc6jnckaj3f663hv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbFKxCUCKkvshgZjb_NWUhzcJf64ZfCuE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29821416659-vsjcqi8vdn6e57gcpc6jnckaj3f663hv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29821416659:android:8f123aa87355c6c7ca1026",
+        "android_client_info": {
+          "package_name": "com.example.languagetranslator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29821416659-vsjcqi8vdn6e57gcpc6jnckaj3f663hv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbFKxCUCKkvshgZjb_NWUhzcJf64ZfCuE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29821416659-vsjcqi8vdn6e57gcpc6jnckaj3f663hv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29821416659:android:102847552230320bca1026",
+        "android_client_info": {
+          "package_name": "com.example.sending_pushnotification_to_other_user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29821416659-vsjcqi8vdn6e57gcpc6jnckaj3f663hv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbFKxCUCKkvshgZjb_NWUhzcJf64ZfCuE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29821416659-vsjcqi8vdn6e57gcpc6jnckaj3f663hv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

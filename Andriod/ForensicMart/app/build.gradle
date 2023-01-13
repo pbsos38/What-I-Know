@@ -1,0 +1,108 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.11.0, 0.99.99]'
+    }
+}
+//apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+
+apply plugin: 'com.android.application'
+//apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.onesignal.androidsdk.GradleProjectPlugin'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+android {
+    compileSdkVersion 31
+
+    defaultConfig {
+        applicationId "com.forensic.mart"
+        minSdkVersion 23
+        targetSdkVersion 31
+        versionCode 6
+        versionName "1.1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//push notifications
+        manifestPlaceholders = [
+                onesignal_app_id               : 'f5dbd0b0-71b8-4258-a27f-e5bcedf64d52',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            crunchPngs false// or true
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            //shrinkResources true
+
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    implementation project(path: ':nativetemplates')
+    implementation 'com.google.firebase:firebase-database:19.5.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.google.android.material:material:1.3.0-alpha03'
+
+    //Retrofit
+    implementation 'com.squareup.retrofit:retrofit:1.9.0'
+    //noinspection GradleDependency
+    implementation 'com.squareup.okhttp:okhttp:2.3.0'
+    //implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.7.2'
+
+    //otp layout
+    implementation 'com.chaos.view:pinview:1.4.3'
+
+    //for gif-progress
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+    //for country list
+    implementation 'com.hbb20:ccp:2.3.1'
+
+    //setting images
+    //implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.squareup.picasso:picasso:2.5.+'
+
+    //ads
+    implementation 'com.google.android.gms:play-services-ads:19.5.0'
+
+    // rich preview link
+//    implementation 'org.jsoup:jsoup:1.11.3'
+//    implementation 'io.github.ponnamkarthik:richlinkpreview:1.0.9'
+
+    //push notifications
+    //implementation 'com.onesignal:OneSignal:3.15.2'
+    implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
+
+    // pdf
+    //implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+
+}

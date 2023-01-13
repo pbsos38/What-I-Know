@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".Index"
+    android:layout_centerInParent="true"
+    >
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/a"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/mainlogo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/s"
+        android:layout_marginTop="130dp"
+        android:gravity="center"
+        android:layout_below="@id/a"
+
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yatra_one"
+        android:text="Fore"
+        android:textColor="@color/White"
+        android:textSize="75sp"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yatra_one"
+        android:text="nsic"
+        android:textColor="@color/apptheme_color"
+        android:textSize="75sp"
+        android:gravity="center"
+        />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yatra_one"
+        android:text="Exams"
+        android:textColor="@color/apptheme_color"
+        android:textSize="85sp"
+        android:layout_below="@+id/s"
+        android:id="@+id/x"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yatra_one"
+        android:text="Powered by-Ormap Forensic Mart PVT.LTD"
+        android:textColor="@color/White"
+        android:textSize="22sp"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom|center"
+        />
+
+</RelativeLayout>

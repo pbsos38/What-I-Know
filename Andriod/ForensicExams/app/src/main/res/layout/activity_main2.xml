@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/apptheme_color"
+    android:orientation="vertical"
+    tools:context="com.Prince.forensicexams.MainActivity"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/ss"
+    android:background="@drawable/background"
+    >
+    <Button
+        style="@style/style_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/apptheme_color"
+        android:layout_margin="20dp"
+        android:onClick="btn_practice"
+        android:id="@+id/aa"
+        android:text="Practice" />
+
+    <Button
+        android:padding="10dp"
+        android:fontFamily="@font/yatra_one"
+        android:backgroundTint="#000C24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/White"
+        android:layout_gravity="center"
+        android:background="@drawable/roundshapebtn"
+        android:layout_margin="20dp"
+        android:onClick="btn_competition"
+        android:text="Competition" />
+</LinearLayout>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/admob_banner_ad"/>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+1)To Declare a variable we have to use let keyword as a variable type For Example.
+	let myVar = 365;
+
+2)To include a variable here we have to use {}. for Example
+	<div>{myVar}</div>
+

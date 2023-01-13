@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="homeCard">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <style name="modifiedEditText" >
+        <item name="android:textSize">@dimen/newsMoreTextSize</item>
+        <item name="android:backgroundTint">@color/purple_200</item>
+    </style>
+    <style name="textInputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="borderRound">10dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="myTextView" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+    <style name="homeImage">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+    </style>
+
+    <dimen name="headerTextSize">22sp</dimen>
+    <dimen name="newsMoreTextSize">12sp</dimen>
+    <dimen name="loginCardRadius">20dp</dimen>
+    <dimen name="loginViewsMargin">10dp</dimen>
+    <dimen name="signup_text_margin_top">10dp</dimen>
+</resources>

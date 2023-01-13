@@ -1,0 +1,5 @@
+if(qty_place_order.getText().toString().isEmpty())
+        {
+            qty_place_order.setError("Fill Quantity");
+            qty_place_order.requestFocus();
+        }

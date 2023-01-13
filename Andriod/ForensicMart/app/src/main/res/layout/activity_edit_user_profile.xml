@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.forensic.mart.Activities.Edit_user_profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp">
+
+            <ImageView
+                android:id="@+id/profile_image_edit_user_profile"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/noprofilepic" />
+
+
+            <TextView
+                android:id="@+id/edit_profile_pic_edit_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EDIT"
+                android:textSize="20dp"
+                android:fontFamily="@font/yatra_one"
+                android:background="#45989898"
+                android:layout_marginTop="-30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/profile_image_edit_user_profile"
+                android:gravity="center"
+                android:textColor="@color/apptheme_color"
+                />
+            <Button
+                android:id="@+id/save_pic_edit_user_profile"
+                style="@style/style_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_image_edit_user_profile"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:text="Save"
+                android:onClick="save_pic"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username_edit_user_profile"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/save_pic_edit_user_profile"
+                android:layout_marginTop="10dp"
+                app:counterEnabled="true"
+                app:errorEnabled="false"
+                app:helperText="Your User Name cannot be Edited"
+                app:helperTextEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/username_edit_user_profile_editable"
+                    style="@style/modifiedEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="User Name"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:textColor="@color/apptheme_color"
+                    android:textSize="30sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/maincard_user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/username_edit_user_profile"
+                android:layout_margin="8dp"
+                android:backgroundTint="#FADBDBDF"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="3dp"
+                card_view:cardCornerRadius="20dp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="8dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/email_edit_user_profile"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:counterEnabled="true"
+                        app:errorEnabled="false"
+                        app:helperText="Your User Name cannot be Edited"
+                        app:helperTextEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/email_edit_user_profile_editable"
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:editable="false"
+                            android:gravity="center"
+                            android:hint="Email"
+                            android:inputType="none"
+                            android:maxLines="1"
+                            android:textColor="@color/apptheme_color"
+                            android:textSize="20sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/mobile_edit_user_profile"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:counterEnabled="true"
+                        app:errorEnabled="false"
+                        android:layout_below="@id/email_edit_user_profile"
+                        app:helperText="Your Mobile No. cannot be Edited"
+                        app:helperTextEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/mobile_edit_user_profile_editable"
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:editable="false"
+                            android:gravity="center"
+                            android:hint="Mobile"
+                            android:inputType="none"
+                            android:maxLines="1"
+                            android:textColor="@color/apptheme_color"
+                            android:textSize="20sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/designation_edit_user_profile"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mobile_edit_user_profile"
+                        android:layout_marginTop="10dp"
+                        app:counterEnabled="true"
+                        app:errorEnabled="false"
+                        app:helperText="Enter/Change Your Designation Here"
+                        app:helperTextEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/designation_edit_user_profile_editable"
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:hint="Designation"
+                            android:inputType="textAutoCorrect"
+                            android:maxLines="1"
+                            android:textColor="@color/apptheme_color"
+                            android:textSize="20sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--<TextView
+                        android:id="@+id/country_user_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/designation_user_profile"
+                        android:layout_marginTop="20dp"
+                        android:text="Country:"
+                        android:textColor="@color/apptheme_color"
+                        android:textSize="20sp" />-->
+                    <Button
+                        android:id="@+id/update_designation_edit_user_profile"
+                        style="@style/style_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/designation_edit_user_profile"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center"
+                        android:text="Update"
+                        android:onClick="update_mainProfile"/>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/justText_educations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/maincard_user_profile"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Educations:"
+                android:textColor="@color/apptheme_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/new_edu_edit_user_profile"
+                style="@style/style_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/maincard_user_profile"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:text="Add New"
+                android:onClick="Add_Education"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_education_edit_users"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/new_edu_edit_user_profile"
+                android:layout_margin="10dp" />
+
+            <TextView
+                android:id="@+id/justText_employments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recycler_education_edit_users"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Employments:"
+                android:textColor="@color/apptheme_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/new_employ_edit_user_profile"
+                style="@style/style_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recycler_education_edit_users"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:text="Add New"
+                android:onClick="add_employment"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_employ_edit_users"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/justText_employments"
+                android:layout_margin="10dp" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

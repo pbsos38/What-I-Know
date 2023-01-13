@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/manage_activity_topMenu_setLive"
+        android:title="Set Live"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/manage_activity_topMenu_setSoon"
+        android:title="Set Coming Soon"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/manage_activity_topMenu_setclosed"
+        android:title="Set Close"
+        app:showAsAction="never" />
+    <!--
+        <item
+            android:id="@+id/manage_activity_switch_expired"
+            android:title="Close"
+            app:showAsAction="never" />
+    -->
+</menu>

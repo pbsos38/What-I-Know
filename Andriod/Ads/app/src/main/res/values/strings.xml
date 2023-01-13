@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Ads</string>
+
+    <string name="admob_app_id">ca-app-pub-8644104320433308~2373841380</string>
+    <string name="admob_banner_ad">ca-app-pub-8644104320433308/8861737426</string>
+    <string name="native_ad_id">ca-app-pub-8644104320433308/3706425734</string>
+
+    //facebook ads
+    <string name="banner_placement_ads">625485831443441_625486444776713</string>
+    <string name="native_placement_ads">625485831443441_625539554771402</string>
+    <string name="banner2_placement_ads">625485831443441_625544841437540</string>
+    <string name="interstitial_placement_ads">625485831443441_625545974770760</string>
+
+    //inmobi
+    <string name="banner_inmobi">1603914499541</string>
+
+</resources>

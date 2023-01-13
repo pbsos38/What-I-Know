@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimg"
+    tools:context=".Home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#8ED3DD"
+                android:visibility="gone"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/myTextView"
+                    android:layout_margin="15dp"
+                    android:text="New Update Available!!"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update Now"
+                    android:backgroundTint="#3DB3C4"
+                    android:layout_gravity="right"
+                    android:textColor="@color/white"/>
+            </LinearLayout>            <TextView
+                style="@style/subHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="District Bar \n Association Mansa" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/homeCard"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            style="@style/homeImage"
+                            android:src="@mipmap/ic_judge" />
+
+                        <TextView
+                            style="@style/myTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Judge"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/homeCard"
+                        android:onClick="launch_lawyers"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            style="@style/homeImage"
+                            android:onClick="launch_lawyers"
+                            android:src="@mipmap/ic_advocate" />
+
+                        <TextView
+                            style="@style/myTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Advocate"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/homeCard"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            style="@style/homeImage"
+                            android:src="@mipmap/ic_association" />
+
+                        <TextView
+                            style="@style/myTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Association"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/homeCard"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            style="@style/homeImage"
+                            android:src="@mipmap/ic_forensicexpertt" />
+
+                        <TextView
+                            style="@style/myTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Forensic \nExpert"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/homeCard"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            style="@style/homeImage"
+                            android:src="@mipmap/ic_judgement" />
+
+                        <TextView
+                            style="@style/myTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Judgement  \n"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/homeCard"
+                        android:text="Ecourtes \n"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            style="@style/homeImage"
+                            android:text="Ecourtes \n"
+                            android:src="@mipmap/ic_ecourt" />
+
+                        <TextView
+                            style="@style/myTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ecourtes \n"
+                            android:onClick="Ecourtes"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/homeCard"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            style="@style/homeImage"
+                            android:src="@mipmap/ic_gallery" />
+
+                        <TextView
+                            style="@style/myTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Gallery"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/homeCard"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            style="@style/homeImage"
+                            android:src="@mipmap/ic_notification" />
+
+                        <TextView
+                            style="@style/myTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Notification"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/homeCard"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            style="@style/homeImage"
+                            android:id="@+id/judgeImage"
+                            android:src="@mipmap/ic_download" />
+
+                        <TextView
+                            android:id="@+id/judgeText"
+                            style="@style/myTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Downloads"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="Admin Login" />
+<!--                        android:onClick="adminLogin"-->
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

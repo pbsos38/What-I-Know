@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CardView.Dark"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="20dp">
+
+    <ImageView
+        android:id="@+id/view_advocate__advocatePic"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/ic_user_foreground" />
+
+    <TextView
+        android:id="@+id/view_advocate__advocateName"
+        style="@style/myTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+
+        android:layout_toEndOf="@id/view_advocate__advocatePic"
+        />
+
+    <TextView
+        android:id="@+id/view_advocate__advocateEnroll"
+        style="@style/myTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enroll No"
+
+        android:layout_toEndOf="@id/view_advocate__advocatePic"
+        android:layout_below="@id/view_advocate__advocateName"
+        />
+
+    <TextView
+        android:id="@+id/view_advocate__advocateMobile"
+        style="@style/myTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile No."
+
+        android:layout_toEndOf="@id/view_advocate__advocatePic"
+        android:layout_below="@id/view_advocate__advocateEnroll"
+        />
+
+    <TextView
+        android:id="@+id/view_advocate__advocateChamber"
+        style="@style/myTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chamber No."
+
+        android:layout_toEndOf="@id/view_advocate__advocatePic"
+        android:layout_below="@id/view_advocate__advocateMobile"
+        />
+</RelativeLayout>

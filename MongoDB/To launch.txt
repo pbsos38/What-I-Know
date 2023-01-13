@@ -1,0 +1,8 @@
+to create server
+ open cmd in the location where the mongod.exe is located and run a command saying mongod.exe
+
+to launch mongo db 
+open cmd in the same location where mongo.exe is located and run a command saying mongo.exe
+
+
+or just run a cmd as an admin and run a command saying mongod.exe and then use mongodbchef

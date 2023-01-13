@@ -1,0 +1,7 @@
+  // have a list with any data type
+  List name = ['prince','Bansal','Tanish'];
+  // have a list with specific data type
+    List<String> names = ['prince','Bansal','Tanish'];
+    names.add('pbsos38');
+    names.remove('Bansal');
+    print(names); 

@@ -1,0 +1,15 @@
+to see all entries in a table
+
+SELECT * FROM autoincrements ;
+
+to see all entres in table with column names
+
+{
+.header on
+.mode column
+SELECT * FROM autoincrements ;
+}
+
+
+to select data from column name
+SELECT NAME FROM autoincrements;

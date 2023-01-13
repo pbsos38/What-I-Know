@@ -1,0 +1,3 @@
+this is just a website site map just like a flow chart which is usually built as an XMl File and this can be build using some online tools.
+Mainly this file contains all the main webpage's URL which can be redirected from other pages.
+And this has to be stored under main directory which is public html folder

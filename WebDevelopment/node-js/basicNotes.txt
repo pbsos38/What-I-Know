@@ -1,0 +1,21 @@
+to move to other drive just command with drive name eg. D:
+2) to run a file run node {filename.js}
+3) npm version
+4) npm install // to start a project
+5) npm install {module name} // eg. nm install express
+6) npm install {module name} -g // to install globally// eg. nm install express -g
+7) npm install {module name} --save // --save will add dependency name to package.json file as well
+8) npm start 
+
+
+
+
+extras 
+npm install @angular/cli  --save  <-- this will help to build all the resources to run an angular frameworks -->
+
+ng new client  <-- to start or initiate angular project -->
+cd clients
+npm start  <-- to start angular module --> // here means while using node with angular we have to give command of npm start as 2 times one for starting node server 2nd for the running the angular 
+localhost:4200
+ng generate component {name} /// eg ng g component contacts <-- this will be create a sub directory for workspace -->
+ng generate service {name} // eg: ng g service contact <-- basically services are used to store all the backend logics and files-->

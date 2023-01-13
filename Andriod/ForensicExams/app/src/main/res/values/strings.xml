@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Forensic Exams</string>
+
+
+    <string name="admob_app_id">ca-app-pub-3692082932732255~5606890252</string>
+    <string name="admob_native_ad">ca-app-pub-3692082932732255/6645489817</string>
+    <string name="admob_banner_ad">ca-app-pub-3692082932732255/8835295618</string>
+    <string name="admob_interstitial_ad">ca-app-pub-3692082932732255/6942988817</string>
+    <string name="forensic_biology_serology"><![CDATA[Forensic Biology & serology]]></string>
+    <string name="forensic_chemistry_toxicology"><![CDATA[Forensic chemistry & Toxicology]]></string>
+    <string name="forensic_ballistics_explosives"><![CDATA[Forensic Ballistics & Explosives]]></string>
+    <string name="header_newComp">New Competition</string>
+    <string name="msg_newComp">Hey User. New Competition has been organised by someone. Please do check.</string>
+</resources>

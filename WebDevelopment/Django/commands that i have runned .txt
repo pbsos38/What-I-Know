@@ -1,0 +1,23 @@
+pip install psycopg2
+
+pip3 install djangorestframework
+
+python -m pip install --user opencv-contrib-python
+
+pip install django-debug-toolbar
+
+
+
+python -m pip install pillow
+
+
+pip freeze				it will tell all the modules/ libraries installed
+
+
+pip install mysqlclient                  installed to connect to mysql
+
+
+pip install mysql-connector-python
+
+
+

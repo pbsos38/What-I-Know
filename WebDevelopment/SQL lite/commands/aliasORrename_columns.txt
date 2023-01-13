@@ -1,0 +1,1 @@
+SELECT name as firstname, salary as income from employees;

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">login@google-FB</string>
+
+    <string name="facebook_app_id">249449559624509</string>
+    <string name="fb_login_protocol_scheme">fb249449559624509</string>
+
+</resources>

@@ -1,0 +1,1 @@
+Rewrite saved content of file and it can be of any type like objects varables etc.

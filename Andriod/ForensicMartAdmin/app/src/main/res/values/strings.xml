@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ForensicMart-Admin</string>
+    <!--    navigation bar-->
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="create_post">create Post</string>
+    <!--    -->
+
+    <!--//admob appid-->
+    <string name="app_id">ca-app-pub-3692082932732255~3180462498</string>
+    <string name="banner_adunit_id">ca-app-pub-3692082932732255/2797319112</string>
+    <string name="banner_adunit_id2">ca-app-pub-3692082932732255/1018824278</string>
+
+    //Push-Notifications
+    <string name="header_newComp">New Competition</string>
+    <string name="msg_newComp">Hey User. New Competition has been organised by someone. Please do check.</string>
+
+
+</resources>

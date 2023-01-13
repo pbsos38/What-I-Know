@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "6113489019",
+    "firebase_url": "https://forensic-mart-admin.firebaseio.com",
+    "project_id": "forensic-mart-admin",
+    "storage_bucket": "forensic-mart-admin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6113489019:android:25dfcfa453ef59abcf72de",
+        "android_client_info": {
+          "package_name": "com.Prince.forensicmart_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6113489019-aorkqc9okh7qaakclfh4aem86b1j7frs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWkB9E8FkUivFwFWDQQ8-bzpf-RGUAnkU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6113489019-aorkqc9okh7qaakclfh4aem86b1j7frs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

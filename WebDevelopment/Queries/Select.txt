@@ -1,0 +1,17 @@
+SELECT Column Example
+The following SQL statement selects the "CustomerName" and "City" columns from the "Customers" table:
+
+SELECT CustomerName, City FROM Customers;
+
+
+
+
+
+
+
+
+SELECT * Example
+The following SQL statement selects all the columns from the "Customers" table:
+
+SELECT * FROM Customers;
+

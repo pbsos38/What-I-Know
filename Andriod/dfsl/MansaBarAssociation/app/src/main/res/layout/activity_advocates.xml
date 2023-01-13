@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundimg"
+    tools:context=".Advocates">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                style="@style/mainHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/welcome_to_dba_mansa" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:alpha="0.9"
+                android:background="@color/grey" />
+            <TextView
+                style="@style/subHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lawyers List" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/advocatesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:reverseLayout="true"
+                app:fastScrollEnabled="true"
+                app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable"
+                app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
+                app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable"
+                app:fastScrollVerticalTrackDrawable="@drawable/line_drawable">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+</LinearLayout>

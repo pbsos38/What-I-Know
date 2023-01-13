@@ -1,0 +1,17 @@
+String mobinput = mobile.getText().toString().trim();
+        if(mobinput.isEmpty())
+        {
+            mobile_lay.setHelperTextEnabled(false);
+            mobile_lay.setErrorEnabled(true);
+            mobile_lay.setError("Please enter your mobile no");
+            mobile.requestFocus();
+            return;
+        }
+        else if(mobile.length() != 10 || mobile.length() !=12)
+        {
+            mobile_lay.setHelperTextEnabled(false);
+            mobile_lay.setErrorEnabled(true);
+            mobile_lay.setError("Your Mobile No seems to be incorrect");
+            mobile.requestFocus();
+            return;
+        }

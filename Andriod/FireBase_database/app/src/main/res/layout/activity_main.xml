@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="20dp"
+    >
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="email"
+    android:id="@+id/email"
+    />
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="phone no"
+    android:id="@+id/phone"
+    />
+        <EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="pwd"
+    android:id="@+id/pwd"
+    />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="send data"
+            android:id="@+id/send_data"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="enter only user and pwd name to fetch data"
+            android:id="@+id/fetch_data"
+                />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fetch data and update phone no and pwd using email"
+            android:id="@+id/update"
+                />
+
+
+</LinearLayout>

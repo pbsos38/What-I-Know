@@ -1,0 +1,27 @@
+void main() {
+ 
+  SuperUser userThree = SuperUser('tanish',20);
+  print(userThree.username);
+  userThree.publish();
+  userThree.method();
+}
+
+class User{
+
+  String username;
+  int age;
+  User(String username, int age){
+    this.username = username;
+    this.age = age;
+  }
+  void method(){
+    print('now we are in user method');
+  }
+}
+
+class SuperUser extends User{
+  SuperUser(String username, int age) : super(username, age);
+  void publish(){
+    print('published update');
+  }
+}

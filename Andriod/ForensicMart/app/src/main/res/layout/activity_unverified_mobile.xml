@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   android:layout_gravity="center"
+    android:gravity="center"
+    tools:context="com.forensic.mart.Activities.unverified_mobile">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/yatra_one"
+        android:includeFontPadding="false"
+        android:text="Verification"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/apptheme_color"
+        android:textSize="50sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/akronim"
+        android:includeFontPadding="false"
+        android:text="Before we proceed, Please verify Your Mobile no."
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/apptheme_color"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/akronim"
+        android:includeFontPadding="false"
+        android:text="Enter verification code sent to you."
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/apptheme_color"
+        android:textSize="20sp" />
+
+
+    <com.chaos.view.PinView
+        android:id="@+id/pin_view"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:cursorVisible="true"
+        android:inputType="number"
+        android:itemBackground="#65EAEAEA"
+        app:cursorColor="@color/apptheme_color"
+        app:hideLineWhenFilled="true"
+        app:itemCount="4"
+        app:itemHeight="50dp"
+        app:itemRadius="5dp"
+        app:itemWidth="50dp"
+        app:lineColor="@color/colorAccent"
+        app:lineWidth="1dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend otp"
+        android:onClick="resendOtp"
+        style="@style/justtext_blue"
+        android:layout_gravity="end"
+        android:textSize="15sp"
+        />
+    <Button
+        style="@style/style_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="callNextScreenFromOTP"
+        android:text="Verify"
+        android:transitionName="transition_OTP_screen" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*Make sure you check your spam box."
+        android:textSize="15sp"
+        tools:ignore="HardcodedText" />
+
+
+</LinearLayout>

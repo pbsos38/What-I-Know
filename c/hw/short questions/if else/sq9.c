@@ -1,0 +1,9 @@
+main()
+{
+    if(5<=7)
+        printf("bangalore");
+    printf("\ncomputer");
+    else
+        printf("education");
+    printf("bathinda")
+}

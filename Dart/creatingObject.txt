@@ -1,0 +1,10 @@
+void main() {
+  User user = User();
+  user.method();
+}
+
+class User{
+  void method(){
+    print('prince');
+  }
+}

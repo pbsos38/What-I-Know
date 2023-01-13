@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "688354363657",
+    "firebase_url": "https://forensic-training-2b81d.firebaseio.com",
+    "project_id": "forensic-training-2b81d",
+    "storage_bucket": "forensic-training-2b81d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688354363657:android:04c3194e8fffb9eaef2bd8",
+        "android_client_info": {
+          "package_name": "com.Prince.forensictraining"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688354363657-3sbdqkvqrjkkvtc2i9esi4p25mredffu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3OLqMYpZNxsWv2d0110FmYDbop04xFUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688354363657-3sbdqkvqrjkkvtc2i9esi4p25mredffu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

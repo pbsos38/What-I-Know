@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/Companies_dashboard_menu"
+            android:title="Companies" />
+        <item
+            android:id="@+id/College_dashboard_menu"
+            android:title="College's" />
+        <!--<item
+            android:id="@+id/Publications_dashboard_menu"
+            android:title="Publications" />-->
+        <item
+            android:id="@+id/Societies_dashboard_menu"
+            android:title="NGO's and Societies " />
+       <!-- <item
+            android:id="@+id/Facebook_dashboard_menu"
+            android:title="Facebook pages " />-->
+        <item
+            android:id="@+id/YouTube_dashboard_menu"
+            android:title="YouTube channel " />
+      <!--  <item
+            android:id="@+id/FSL_dashboard_menu"
+            android:title="FSL'S" />-->
+        <item
+            android:id="@+id/Courses_dashboard_menu"
+            android:title="Courses" />
+        <!--<item
+            android:id="@+id/Competition_dashboard_menu"
+            android:title="Competition's" />-->
+        <!--<item
+            android:id="@+id/Conference_dashboard_menu"
+            android:title="Conference room" />-->
+        <item
+            android:id="@+id/Chats_dashboard_menu"
+            android:title="Chats" />
+
+
+
+    </group>
+</menu>
