@@ -1,0 +1,25 @@
+[{
+  "id":1,
+  "Name":"Dummy House 1",
+  "Type": "House",
+  "Price":12000
+
+},{
+  "id":2,
+  "Name":"Dummy House 2",
+  "Type": "House",
+  "Price":12000
+
+},{
+  "id":3,
+  "Name":"Dummy House 3",
+  "Type": "House",
+  "Price":12000
+
+},{
+  "id":4,
+  "Name":"Dummy House 4",
+  "Type": "House",
+  "Price":12000
+
+}]
