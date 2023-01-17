@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { IProperty } from '../property-list/IProperty.interface';
 
 
 @Component({
@@ -9,5 +10,5 @@ import { Component, Input } from '@angular/core';
 })
 
 export class propertyCardCompnent{
-  @Input() Property :any
+  @Input() Property :IProperty;
 }

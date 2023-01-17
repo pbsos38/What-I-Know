@@ -1,23 +1,27 @@
 [{
   "id":1,
+  "sellRent":1,
   "Name":"Dummy House 1",
   "Type": "House",
   "Price":12000
 
 },{
   "id":2,
+  "sellRent":2,
   "Name":"Dummy House 2",
   "Type": "House",
   "Price":12000
 
 },{
   "id":3,
+  "sellRent":1,
   "Name":"Dummy House 3",
   "Type": "House",
   "Price":12000
 
 },{
   "id":4,
+  "sellRent":1,
   "Name":"Dummy House 4",
   "Type": "House",
   "Price":12000
