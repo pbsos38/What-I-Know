@@ -12,6 +12,10 @@ export class AddPropertyComponent implements OnInit {
 
   ngOnInit() {
 
+    setTimeout( ()=>{
+      this.addPropertyForm.controls['Name'].setValue("Name Here");
+    },1000);
+
   }
   onBack(){
     this.route.navigate(['/']);

@@ -21,6 +21,7 @@ export class UserRegisterComponent implements OnInit {
 
     },this.passwordMatchValidator);
 
+    this.registrationForm.controls['email'].setValue("email@domain.com");
   }
 
   passwordMatchValidator(ngF: AbstractControl) : ValidationErrors | null{
