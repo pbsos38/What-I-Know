@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { User } from 'src/app/model/user';
 import { UserServiceService } from 'src/app/Service/user-service.service';
+import { AlertyfyService } from 'src/app/Service/alertyfy.service';
 
 @Component({
   selector: 'app-user-register',
@@ -13,7 +14,7 @@ export class UserRegisterComponent implements OnInit {
   registrationForm:FormGroup;
   user:User
   userSubmitted:boolean;
-  constructor(private fb: FormBuilder,private userService: UserServiceService) { }
+  constructor(private fb: FormBuilder,private userService: UserServiceService, private alertyfyservice: AlertyfyService) { }
 
   ngOnInit() {
     // this.registrationForm = new FormGroup({
@@ -55,6 +56,10 @@ export class UserRegisterComponent implements OnInit {
       this.userService.addUser(this.user);
       this.registrationForm.reset();
       this.userSubmitted = false;
+      this.alertyfyservice.success("Congrats! you are registered now.")
+    }else{
+      this.alertyfyservice.error("Some Error Found!");
+
     }
 
   }
