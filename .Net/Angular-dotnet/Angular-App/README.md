@@ -29,3 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## To add the alert JS Library
 npm install alertifyjs --save
+[](https://alertifyjs.com/)
+
+## To Use Bootstrap JQuery
+ng add ngx-bootstrap
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown
+ BsDropdownModule.forRoot()
