@@ -2,3 +2,12 @@
 @import '/src/assets/form.css';
 @import '../node_modules/alertifyjs/build/css/alertify.min.css';
 @import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
+@import '/src/assets/tabs.css';
+
+button{
+  margin-top: 10px;
+}
+
+.card-header{
+  background-color: #0d6efd;
+}
