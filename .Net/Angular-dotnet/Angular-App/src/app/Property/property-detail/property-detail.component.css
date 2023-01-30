@@ -11,12 +11,16 @@
   height: 250px;
 }
 
-.ngx-gallery
-{
+.ngx-gallery {
   display: inline-block;
   margin-bottom: 20px;
 }
 
-.heading{
+.heading {
   text-align: left;
+}
+
+.ngx-gallery {
+  display: inline-block;
+  margin-bottom: 20px;
 }

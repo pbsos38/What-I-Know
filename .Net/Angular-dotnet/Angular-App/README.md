@@ -35,3 +35,7 @@ npm install alertifyjs --save
 ng add ngx-bootstrap
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown
  BsDropdownModule.forRoot()
+
+
+## for Installing gallery view 
+npm install @kolkov/ngx-gallery --force

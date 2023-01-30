@@ -22,7 +22,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import {ButtonsModule} from 'ngx-bootstrap/buttons';
 import { BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import { PropertyRouteResolverService } from './Property/property-detail/property-route-resolver.service';
-
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
 const appRoutes: Routes = [
   {
@@ -78,7 +78,8 @@ const appRoutes: Routes = [
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     ButtonsModule.forRoot(),
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    NgxGalleryModule
   ],
   providers: [
     HousingService,
