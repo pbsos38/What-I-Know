@@ -14,15 +14,19 @@ export class HousingService {
 
   constructor(private http: HttpClient) { }
 
-  getAllListings(sellRent: number): Observable<IPropertyBase[]> {
+  getAllListings(sellRent?: number): Observable<IPropertyBase[]> {
     return this.http.get('data/list.json').pipe(
       map(data => {
         const listArray: Array<Property> = [];
         const newProperty = JSON.parse(localStorage.getItem('newProp') || '{}');
 
-        if(newProperty){
+        if (newProperty) {
           for (const id in newProperty) {
-            if (newProperty.hasOwnProperty(id) && newProperty[id].sellRent === sellRent) {
+            if (sellRent) {
+              if (newProperty.hasOwnProperty(id) && newProperty[id].sellRent === sellRent) {
+                listArray.push(newProperty[id]);
+              }
+            } else {
               listArray.push(newProperty[id]);
             }
           }
@@ -32,9 +36,14 @@ export class HousingService {
         // }
 
         for (const id in data) {
-          if (data.hasOwnProperty(id) && data[id].sellRent === sellRent) {
+          if (sellRent) {
+            if (data.hasOwnProperty(id) && data[id].sellRent === sellRent) {
+              listArray.push(data[id]);
+              console.log(listArray);
+            }
+          } else {
             listArray.push(data[id]);
-            console.log(listArray);
+
           }
         }
         console.log(listArray);
@@ -45,25 +54,34 @@ export class HousingService {
 
   }
 
+
+  getProperty(id: number) {
+    return this.getAllListings().pipe(
+      map(propertyArray => {
+        return propertyArray.find(p => p.id === id) as Property;
+      })
+    );
+  }
+
   addProperty(property: Property) {
     let newProp: Property[];
-    if(localStorage.getItem('newProp')){
+    if (localStorage.getItem('newProp')) {
 
       newProp = [property, ...JSON.parse(localStorage.getItem('newProp') as string)];
-    }else{
+    } else {
       newProp = [property];
     }
     localStorage.setItem("newProp", JSON.stringify(newProp));
   }
 
-  newPropId(){
-    if(localStorage.getItem('PID')){
-      const temp= String(+(localStorage.getItem('PID') as string)+1);
-      localStorage.setItem('PID',temp);
+  newPropId() {
+    if (localStorage.getItem('PID')) {
+      const temp = String(+(localStorage.getItem('PID') as string) + 1);
+      localStorage.setItem('PID', temp);
       return +temp;
 
-    }else{
-      localStorage.setItem('PID','101');
+    } else {
+      localStorage.setItem('PID', '101');
       return 101;
     }
   }
