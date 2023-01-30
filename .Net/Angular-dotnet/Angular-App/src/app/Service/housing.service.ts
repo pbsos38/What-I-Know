@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { map } from 'rxjs/operators';
-import { IPropertyBase } from '../model/IPropertyBase.interface';
 import { Observable } from 'rxjs';
 import { Property } from '../model/property';
 
@@ -14,7 +13,7 @@ export class HousingService {
 
   constructor(private http: HttpClient) { }
 
-  getAllListings(sellRent?: number): Observable<IPropertyBase[]> {
+  getAllListings(sellRent?: number): Observable<Property[]> {
     return this.http.get('data/list.json').pipe(
       map(data => {
         const listArray: Array<Property> = [];
@@ -58,6 +57,7 @@ export class HousingService {
   getProperty(id: number) {
     return this.getAllListings().pipe(
       map(propertyArray => {
+        // throw new Error("some error");
         return propertyArray.find(p => p.id === id) as Property;
       })
     );
