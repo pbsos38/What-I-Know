@@ -20,7 +20,7 @@ export class AddPropertyComponent implements OnInit {
   furnishedType: Array<String> = ['Fully', 'Semi', 'Unfurnished'];
   NextClicked: boolean;
   property= new Property();
-
+  cityList;
   propertyView: IPropertyBase = {
     id: 0,
     Name: '',
@@ -47,6 +47,10 @@ export class AddPropertyComponent implements OnInit {
     // },1000);
 
     this.createAddPropertyForm();
+    this.housingService.getAllCities().subscribe(data =>{
+      this.cityList = data;
+      console.log(data);
+    })
   }
 
   createAddPropertyForm() {
