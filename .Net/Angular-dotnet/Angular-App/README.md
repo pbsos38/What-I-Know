@@ -39,3 +39,6 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown
 
 ## for Installing gallery view 
 npm install @kolkov/ngx-gallery --force
+
+## to install Firebase Cli 
+ng add @angular/fire
