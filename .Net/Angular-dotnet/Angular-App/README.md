@@ -42,3 +42,14 @@ npm install @kolkov/ngx-gallery --force
 
 ## to install Firebase Cli 
 ng add @angular/fire
+
+## To add Database Connection 
+-add package using nuget manager named 
+  --microsoft.EntityFrameworkCore 
+  --Microsoft.EntityFrameworkCore.SqlServer
+  --Microsoft.EntityFrameworkCore.Tools 
+
+-Open Package manager console
+  --add-migration [Msg]
+  --Update Database
+  

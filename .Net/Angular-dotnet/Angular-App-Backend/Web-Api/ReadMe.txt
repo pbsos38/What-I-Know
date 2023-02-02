@@ -1,0 +1,1 @@
+#To add Database Connection add package named microsoft.EntityFrameworkCore using nuget manager

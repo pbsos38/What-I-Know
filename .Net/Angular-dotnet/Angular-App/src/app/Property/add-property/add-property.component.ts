@@ -20,7 +20,7 @@ export class AddPropertyComponent implements OnInit {
   furnishedType: Array<String> = ['Fully', 'Semi', 'Unfurnished'];
   NextClicked: boolean;
   property= new Property();
-  cityList;
+  cityList:any[];
   propertyView: IPropertyBase = {
     id: 0,
     Name: '',
