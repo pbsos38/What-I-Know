@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Permissions;
 using Web_Api.Data;
-using Web_Api.Data.Repo;
+using Web_Api.Interfaces;
 using Web_Api.models;
 
 namespace Web_Api.Controllers
@@ -12,11 +13,11 @@ namespace Web_Api.Controllers
     public class CityController : Controller
     {
 
-        private ICityRepository repo;
+        private IUnitOfWork uow;
 
-        public CityController(ICityRepository repo)
+        public CityController(IUnitOfWork uow)
         {
-            this.repo = repo;
+            this.uow = uow;
         }
 
         [HttpGet]
@@ -34,7 +35,7 @@ namespace Web_Api.Controllers
         [HttpGet("cities")]
         public async Task<IActionResult> GetCities()
         {
-            var cities = await repo.GetCitiesAsync();
+            var cities = await uow.CityRepository.GetCitiesAsync();
             return Ok(cities);
         }
         //Post api/city/AddCity?name=City4
@@ -63,8 +64,8 @@ namespace Web_Api.Controllers
         {
 /*            City city = new City();
             city.Name = name;
-*/            repo.AddCity(cityObj);
-            await repo.SaveAsync();
+*/          uow.CityRepository.AddCity(cityObj);
+            await uow.SaveAsync();
             return StatusCode(201);
         }
 
@@ -73,8 +74,8 @@ namespace Web_Api.Controllers
         {
             //var city = await dc.Cities.FindAsync(id);
             //dc.Cities.Remove(city);
-            repo.DeleteCity(id);
-            await repo.SaveAsync();
+            uow.CityRepository.DeleteCity(id);
+            await uow.SaveAsync();
             return Ok(id);
         }
 

@@ -1,6 +1,6 @@
 ﻿using Web_Api.models;
 
-namespace Web_Api.Data.Repo
+namespace Web_Api.Interfaces
 {
     public interface ICityRepository
     {
@@ -10,7 +10,6 @@ namespace Web_Api.Data.Repo
 
         void DeleteCity(int CityId);
 
-        Task<bool> SaveAsync();
 
     }
 }

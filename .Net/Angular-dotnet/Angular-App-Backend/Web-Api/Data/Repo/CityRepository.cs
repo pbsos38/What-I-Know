@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Web_Api.Interfaces;
 using Web_Api.models;
 
 namespace Web_Api.Data.Repo
@@ -28,9 +29,5 @@ namespace Web_Api.Data.Repo
             return await dc.Cities.ToListAsync();
         }
 
-        public async Task<bool> SaveAsync()
-        {
-            return await dc.SaveChangesAsync() > 0;
-        }
     }
 }
