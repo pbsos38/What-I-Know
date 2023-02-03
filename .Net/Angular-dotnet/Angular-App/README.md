@@ -52,4 +52,6 @@ ng add @angular/fire
 -Open Package manager console
   --add-migration [Msg]
   --Update Database
-  
+
+-To update Table structure
+ --Add-Migration AddLastUpdatedFields

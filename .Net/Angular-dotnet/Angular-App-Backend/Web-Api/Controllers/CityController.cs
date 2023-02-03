@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Permissions;
 using Web_Api.Data;
+using Web_Api.Dtos;
 using Web_Api.Interfaces;
 using Web_Api.models;
 
@@ -36,8 +37,17 @@ namespace Web_Api.Controllers
         public async Task<IActionResult> GetCities()
         {
             var cities = await uow.CityRepository.GetCitiesAsync();
-            return Ok(cities);
+
+            var citiesDto = from c in cities
+                            select new CityDto()
+                            {
+                                Id = c.Id,
+                                Name = c.Name
+                            };
+
+            return Ok(citiesDto);
         }
+
         //Post api/city/AddCity?name=City4
         [HttpPost("AddCity")]
 
@@ -59,12 +69,20 @@ namespace Web_Api.Controllers
         //Post api/city/AddCity/cityObj
         // For adding a whole JSON object Varible name should be same as of function parameters
         [HttpPost("AddCityObj")]
-
-        public async Task<IActionResult> AddCity(City cityObj)
+        public async Task<IActionResult> AddCity(CityDto cityDto)
         {
-/*            City city = new City();
-            city.Name = name;
-*/          uow.CityRepository.AddCity(cityObj);
+            /*            City city = new City();
+                        city.Name = name;
+
+            */
+
+            var city = new City
+            {
+                Name = cityDto.Name,
+                LastUpdatedBy = 1,
+                LastUpdatedOn = DateTime.Now
+            };
+          uow.CityRepository.AddCity(city);
             await uow.SaveAsync();
             return StatusCode(201);
         }
