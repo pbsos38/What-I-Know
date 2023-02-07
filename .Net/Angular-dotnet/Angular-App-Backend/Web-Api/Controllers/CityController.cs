@@ -118,14 +118,13 @@ namespace Web_Api.Controllers
             {
                 return BadRequest(string);
             }*/
-            try
-            {
+           
                 var cityFromDb = await uow.CityRepository.FindCity(id);
-
+/*
                 if (cityFromDb == null)
                 {
                     return BadRequest("Update not allowed");
-                }
+                }*/
                 cityFromDb.Id = id;
                 cityFromDb.LastUpdatedOn = DateTime.Now;
                 cityFromDb.LastUpdatedBy = 1;
@@ -133,11 +132,8 @@ namespace Web_Api.Controllers
                 mapper.Map(cityDto, cityFromDb);
                 await uow.SaveAsync();
                 return StatusCode(200);
-            }
-            catch
-            {
-                return BadRequest(500, "Some unknown error occured!");
-            }
+            
+            
         }
         [HttpPut("UpdateCityName/{id}")]
         public async Task<IActionResult> UpdateCityName(int id, CityUpdateDto cityDto)
