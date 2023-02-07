@@ -1,10 +1,13 @@
-﻿namespace Web_Api.models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Web_Api.models
 {
     public class City
     {
         public int Id { get; set; }
         public string Name { get; set; }
 
+        [Required]
         public string Country { get; set; }
         public DateTime LastUpdatedOn { get; set; }
 
