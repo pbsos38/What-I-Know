@@ -48,7 +48,8 @@ ng add @angular/fire
   --microsoft.EntityFrameworkCore 
   --Microsoft.EntityFrameworkCore.SqlServer
   --Microsoft.EntityFrameworkCore.Tools 
-
+  --Swashbuckle.AspNetCore
+  --Microsoft.AspNetCore.Mvc.NewtonsoftJson (for HttpPatch)
 -Open Package manager console
   --add-migration [Msg]
   --Update Database

@@ -8,7 +8,10 @@ namespace Web_Api.Helpers
     {
         public AutoMapperProfiles()
         {
-            CreateMap<City, CityDto>().ReverseMap();
+            CreateMap<City, CityDto>();
+            CreateMap<CityDto, City>();
+            CreateMap<City, CityUpdateDto>();
+            CreateMap<CityUpdateDto, City>();
         }
     }
 }

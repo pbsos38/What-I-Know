@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using Azure;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Permissions;
@@ -107,6 +109,64 @@ namespace Web_Api.Controllers
             await uow.SaveAsync();
             return Ok(id);
         }
+
+        [HttpPut("UpdateCity/{id}")]
+        public async Task<IActionResult> UpdateCity(int id, CityDto cityDto)
+        {
+            var cityFromDb = await uow.CityRepository.FindCity(id);
+            cityFromDb.Id = id;
+            cityFromDb.LastUpdatedOn = DateTime.Now;
+            cityFromDb.LastUpdatedBy = 1;
+
+            mapper.Map(cityDto, cityFromDb);
+            await uow.SaveAsync();
+            return StatusCode(200);
+        }
+        [HttpPut("UpdateCityName/{id}")]
+        public async Task<IActionResult> UpdateCityName(int id, CityUpdateDto cityDto)
+        {
+            var cityFromDb = await uow.CityRepository.FindCity(id);
+            cityFromDb.Id = id;
+            cityFromDb.LastUpdatedOn = DateTime.Now;
+            cityFromDb.LastUpdatedBy = 1;
+
+            mapper.Map(cityDto, cityFromDb);
+            await uow.SaveAsync();
+            return StatusCode(200);
+        }
+
+        /*
+         [
+          {
+            "path": "/Name",
+            "op": "replace",
+            "value": "hit"
+          },
+        {
+            "path": "/Country",
+            "op": "replace",
+            "value": "hit"
+          },
+        ........
+        ]
+        */
+        [HttpPatch("UpdateCityByPatch/{id}")]
+        public async Task<IActionResult> UpdateCityByPatch(int id, JsonPatchDocument<City> cityToPatch)
+        {
+            var cityFromDb = await uow.CityRepository.FindCity(id);
+            cityFromDb.Id = id;
+            cityFromDb.LastUpdatedOn = DateTime.Now;
+            cityFromDb.LastUpdatedBy = 1;
+
+            cityToPatch.ApplyTo(cityFromDb, ModelState);
+            await uow.SaveAsync();
+            return StatusCode(200);
+
+            // it's always recommended to use put over patch as patch gives flexibilty to use operators and manipulate data as needed whereas put has an entity to follow
+
+
+        }
+
 
     }
 }

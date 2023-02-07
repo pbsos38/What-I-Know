@@ -1,9 +1,8 @@
 ﻿namespace Web_Api.Dtos
 {
-    public class CityDto
+    public class CityUpdateDto
     {
         public string Name { get; set; }
-        public string Country { get; set; }
     
     }
 }

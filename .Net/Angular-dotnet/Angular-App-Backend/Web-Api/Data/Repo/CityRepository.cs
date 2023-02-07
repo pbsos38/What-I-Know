@@ -29,5 +29,9 @@ namespace Web_Api.Data.Repo
             return await dc.Cities.ToListAsync();
         }
 
+        public async Task<City> FindCity(int id)
+        {
+            return await dc.Cities.FindAsync(id);
+        }
     }
 }
