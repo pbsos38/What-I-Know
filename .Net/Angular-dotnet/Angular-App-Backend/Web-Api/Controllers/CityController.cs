@@ -29,6 +29,7 @@ namespace Web_Api.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            throw new ExecutionEngineException();
             return new string[] { "Atlanta", "New York" };
         }
         [HttpGet("{id}")]
