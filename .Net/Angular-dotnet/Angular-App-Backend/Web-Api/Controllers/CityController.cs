@@ -12,9 +12,8 @@ using Web_Api.models;
 
 namespace Web_Api.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CityController : Controller
+    
+    public class CityController : BaseController
     {
 
         private IUnitOfWork uow;

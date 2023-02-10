@@ -10,8 +10,12 @@ namespace Web_Api.Helpers
         {
             CreateMap<City, CityDto>();
             CreateMap<CityDto, City>();
+            
             CreateMap<City, CityUpdateDto>();
             CreateMap<CityUpdateDto, City>();
+            
+            CreateMap<UserDto, User>();
+            CreateMap<User, UserDto>(); 
         }
     }
 }
