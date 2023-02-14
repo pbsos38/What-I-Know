@@ -56,10 +56,15 @@ app.UseMiddleware<ExceptionMiddleware>();*/
 
 app.UseHttpsRedirection();
 
+app.UseHsts();// for restricting all Http requests
+app.UseHttpsRedirection(); // redirecting all http request to Https
 app.UseCors(m => m.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.MapControllers();
 

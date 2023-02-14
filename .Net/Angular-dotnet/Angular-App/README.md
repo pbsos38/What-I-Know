@@ -57,5 +57,9 @@ ng add @angular/fire
 -To update Table structure
  --Add-Migration AddLastUpdatedFields
 
- ## To Use the JWT authrization we need to install 
-    --Microsoft.AspNetCore.Authentication.JwtBearer
+## To Use the JWT authrization we need to install 
+  --Microsoft.AspNetCore.Authentication.JwtBearer
+
+
+# To add environment files
+ --ng generate environments

@@ -4,12 +4,13 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Property } from '../model/property';
-
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 
 export class HousingService {
+  baseUrl = environment.baseUrl;
 
   constructor(private http: HttpClient) { }
 
@@ -87,7 +88,7 @@ export class HousingService {
   }
 
   getAllCities(): Observable<string[]>{
-    return this.http.get<string[]>('https://localhost:7232/api/City/cities');
+    return this.http.get<string[]>(this.baseUrl+'/api/City/cities');
   }
 
 }
