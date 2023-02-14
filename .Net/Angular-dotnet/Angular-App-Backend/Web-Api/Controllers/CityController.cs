@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Azure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +13,7 @@ using Web_Api.models;
 
 namespace Web_Api.Controllers
 {
-    
+    [Authorize]
     public class CityController : BaseController
     {
 
@@ -26,9 +27,10 @@ namespace Web_Api.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public IEnumerable<string> Get()
         {
-            throw new ExecutionEngineException();
+            //throw new ExecutionEngineException();
             return new string[] { "Atlanta", "New York" };
         }
         [HttpGet("{id}")]
@@ -101,6 +103,7 @@ namespace Web_Api.Controllers
         }
 
         [HttpDelete("delete/{id}")]
+
         public async Task<IActionResult> RemoveCity(int id)
         {
             //var city = await dc.Cities.FindAsync(id);
