@@ -3,6 +3,7 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors,
 import { User } from 'src/app/model/user';
 import { UserServiceService } from 'src/app/Service/user-service.service';
 import { AlertyfyService } from 'src/app/Service/alertyfy.service';
+import { AuthService } from 'src/app/Service/auth.service';
 
 @Component({
   selector: 'app-user-register',
@@ -14,7 +15,7 @@ export class UserRegisterComponent implements OnInit {
   registrationForm:FormGroup;
   user:User
   userSubmitted:boolean;
-  constructor(private fb: FormBuilder,private userService: UserServiceService, private alertyfyservice: AlertyfyService) { }
+  constructor(private fb: FormBuilder,private userService: AuthService, private alertyfyservice: AlertyfyService) { }
 
   ngOnInit() {
     // this.registrationForm = new FormGroup({
@@ -53,10 +54,17 @@ export class UserRegisterComponent implements OnInit {
     this.userSubmitted = true;
     if(this.registrationForm.valid){
       this.user =  Object.assign(this.registrationForm.value);
-      this.userService.addUser(this.user);
-      this.registrationForm.reset();
-      this.userSubmitted = false;
-      this.alertyfyservice.success("Congrats! you are registered now.")
+      this.userService.registerUser(this.user).subscribe(
+        ()=>{
+          this.registrationForm.reset();
+          this.userSubmitted = false;
+          this.alertyfyservice.success("Congrats! you are registered now.")
+
+        },error=>{
+          console.log(error);
+          this.alertyfyservice.error(error.error);
+        }
+      );
     }else{
       this.alertyfyservice.error("Some Error Found!");
 

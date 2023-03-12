@@ -10,6 +10,7 @@ namespace Web_Api.Interfaces
 
         Task<bool> UserAlreadyExists(string username);
 
+        Task<IEnumerable<City>> test();
         
     }
 }

@@ -39,7 +39,7 @@ namespace Web_Api.Controllers
             return ("Atlanta");
         }
 
-
+        [AllowAnonymous]
         [HttpGet("cities")]
         public async Task<IActionResult> GetCities()
         {
@@ -183,6 +183,20 @@ namespace Web_Api.Controllers
 
         }
 
+        [AllowAnonymous]
+        [HttpGet("test")]
+        public async Task<IEnumerable<City>> test()
+        {
+            var city = await uow.UserRepository.test();
+            if (city == null)
+            {
+                return null;
+            }
+            return city;
+
+        }
 
     }
+
+
 }

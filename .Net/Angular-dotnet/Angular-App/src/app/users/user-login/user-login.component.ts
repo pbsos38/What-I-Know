@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AlertyfyService } from 'src/app/Service/alertyfy.service';
 import { AuthService } from 'src/app/Service/auth.service';
+import { UserForLogin } from 'src/app/model/user';
 
 @Component({
   selector: 'app-user-login',
@@ -18,14 +19,26 @@ export class UserLoginComponent implements OnInit {
   }
 
   onLogin(loginForm: NgForm){
-    const user = this.auth.authUser(loginForm.value);
-    if(user){
-      localStorage.setItem('token',user.userName);
-      this.alertyfy.success("Login Successful!");
-      this.router.navigate(['/']);
-    }else{
-      this.alertyfy.error("Some error Occurred!");
-    }
+    this.auth.authUser(loginForm.value).subscribe(
+      (response: UserForLogin) => {
+        console.log(response);
+        const inUser = response;
+        localStorage.setItem('token',inUser.token);
+        localStorage.setItem('userName',inUser.userName);
+        this.alertyfy.success("Login Successful");
+        this.router.navigate(['/']);
+      },error=>{
+        console.log(error);
+        this.alertyfy.error(error.error);
+      }
+    );
+    // if(user){
+    //   localStorage.setItem('token',user.userName);
+    //   this.alertyfy.success("Login Successful!");
+    //   this.router.navigate(['/']);
+    // }else{
+    //   this.alertyfy.error("Some error Occurred!");
+    // }
   }
 
 }

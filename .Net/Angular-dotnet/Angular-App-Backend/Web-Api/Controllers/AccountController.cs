@@ -29,16 +29,16 @@ namespace Web_Api.Controllers
             var user = await uow.UserRepository.Authenticate(loginReq.UserName, loginReq.Password);
             //var userDto =  mapper.Map<UserDto>(user);
 
-            var userDto = new UserDto();
-            userDto.UserName = user.Username;
-            userDto.token = createJWT(user);
-
             if(user == null)
             {
-                return Unauthorized();
+                return Unauthorized("Username and password is invalid combination!");
             }
             else
             {
+                var userDto = new UserDto();
+                userDto.UserName = user.Username;
+                userDto.token = createJWT(user);
+
                 return Ok(userDto);
             }
         }

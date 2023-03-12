@@ -9,15 +9,18 @@ export class UserServiceService {
   constructor() { }
 
   addUser(user: User) {
-    let users: User[];
+    // let users: User[];
 
-    if (localStorage.getItem('Users')) {
-      users = JSON.parse(localStorage.getItem('Users') as string);
-      users = [user, ...users];
-    } else {
-      users = [user];
-    }
-    localStorage.setItem('Users', JSON.stringify(users));
+    // if (localStorage.getItem('Users')) {
+    //   users = JSON.parse(localStorage.getItem('Users') as string);
+    //   users = [user, ...users];
+    // } else {
+    //   users = [user];
+    // }
+    // localStorage.setItem('Users', JSON.stringify(users));
+
+    
+
   }
 
 }

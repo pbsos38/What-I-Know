@@ -2,7 +2,7 @@
   <div class="col-6 m-auto">
   <div class="card m-auto">
     <div class="card-header">
-      Register
+      <h3>Register</h3>
     </div>
     <div class="card-body">
       <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
@@ -27,7 +27,7 @@
 
         <div class="form-group col-12">
           <label for="passwrod" class="form-label">Password</label>
-          <input type="text" class="form-control" formControlName="password">
+          <input type="password" class="form-control" formControlName="password">
           <span *ngIf="!password.valid && password.touched || userSubmitted" class="error-block">
             <!-- <span *ngIf="password.errors['required']"> -->
             <span *ngIf="password.hasError('required')">
@@ -42,7 +42,7 @@
 
         <div class="form-group col-12">
           <label for="cpassword" class="form-label">Confirm Password</label>
-          <input type="text" class="form-control" formControlName="confirmPassword">
+          <input type="password" class="form-control" formControlName="confirmPassword">
           <span *ngIf="!confirmPassword.valid && confirmPassword.touched || userSubmitted" class="error-block">
             <span *ngIf="confirmPassword.hasError('required')">
               Please enter Password!

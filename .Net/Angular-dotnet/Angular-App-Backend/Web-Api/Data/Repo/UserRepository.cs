@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 using Web_Api.Interfaces;
@@ -66,6 +67,15 @@ namespace Web_Api.Data.Repo
         public async Task<bool> UserAlreadyExists(string username)
         {
            return await dc.Users.AnyAsync(dc => dc.Username == username);  
+        }
+
+        public async Task<IEnumerable<City>> test()
+        {
+            var user = await dc.Cities.OrderBy(c=>c.Name).ToListAsync();
+            if (user == null) {
+                return null;
+            }
+            return user;
         }
     }
 }
