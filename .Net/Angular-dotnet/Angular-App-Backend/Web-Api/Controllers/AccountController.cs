@@ -5,6 +5,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Web_Api.Dtos;
+using Web_Api.Errors;
 using Web_Api.Interfaces;
 using Web_Api.models;
 
@@ -28,10 +29,13 @@ namespace Web_Api.Controllers
         {
             var user = await uow.UserRepository.Authenticate(loginReq.UserName, loginReq.Password);
             //var userDto =  mapper.Map<UserDto>(user);
-
+            ApiError apiError = new ApiError();
             if(user == null)
             {
-                return Unauthorized("Username and password is invalid combination!");
+                apiError.ErrorCode = Unauthorized().StatusCode;
+                apiError.ErrorMessage = "Invalid Username and password";
+                apiError.ErrorDetails = "This error appers when provided user id or password does not exists";
+                return Unauthorized(apiError);
             }
             else
             {
@@ -47,9 +51,12 @@ namespace Web_Api.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(LoginRegDto loginRegDto)
         {
+            ApiError apiError = new ApiError();
             if(await uow.UserRepository.UserAlreadyExists(loginRegDto.UserName))
             {
-                return BadRequest("User Already existes, please try something else");
+                apiError.ErrorCode = BadRequest().StatusCode;
+                apiError.ErrorMessage = "User Already existes, please try something else";
+                return BadRequest(apiError);
             }
 
             uow.UserRepository.Register(loginRegDto.UserName, loginRegDto.Password);

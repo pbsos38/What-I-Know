@@ -60,9 +60,6 @@ export class UserRegisterComponent implements OnInit {
           this.userSubmitted = false;
           this.alertyfyservice.success("Congrats! you are registered now.")
 
-        },error=>{
-          console.log(error);
-          this.alertyfyservice.error(error.error);
         }
       );
     }else{
