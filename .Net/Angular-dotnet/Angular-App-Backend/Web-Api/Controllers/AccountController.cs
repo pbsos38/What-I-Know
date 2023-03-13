@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Text;
 using Web_Api.Dtos;
 using Web_Api.Errors;
+using Web_Api.Extensions;
 using Web_Api.Interfaces;
 using Web_Api.models;
 
@@ -52,6 +53,16 @@ namespace Web_Api.Controllers
         public async Task<IActionResult> Register(LoginRegDto loginRegDto)
         {
             ApiError apiError = new ApiError();
+
+            if (loginRegDto.UserName.IsEmpty()||
+                loginRegDto.Password.IsEmpty())
+            {
+                apiError.ErrorCode = BadRequest().StatusCode;
+                apiError.ErrorMessage = "Username or password cannot be empty";
+                return BadRequest(apiError);
+            }
+
+
             if(await uow.UserRepository.UserAlreadyExists(loginRegDto.UserName))
             {
                 apiError.ErrorCode = BadRequest().StatusCode;
