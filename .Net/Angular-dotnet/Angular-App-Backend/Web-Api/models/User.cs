@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Web_Api.models
 {
-    public class User
+    public class User : BaseEntity
     {
         public int Id { get; set; }
 
@@ -13,5 +14,6 @@ namespace Web_Api.models
         public byte[] Password { get; set; }
 
         public byte[] PasswordKey { get; set; }
-    }
+
+       }
 }

@@ -54,8 +54,9 @@ ng add @angular/fire
   --Microsoft.AspNetCore.Mvc.NewtonsoftJson (for HttpPatch)
 -Open Package manager console
   --add-migration [Msg]
-  --Update Database
-
+  --Update-Database
+  -- Add-Migration InitialCreate -OutputDir 
+  
 -To update Table structure
  --Add-Migration AddLastUpdatedFields
 

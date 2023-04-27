@@ -15,23 +15,23 @@ namespace Web_Api.Data.Repo
         }
         public void AddCity(City city)
         {
-            dc.Cities.AddAsync(city);
+            dc.CityList.AddAsync(city);
         }
 
         public void DeleteCity(int CityId)
         {
-            var city = dc.Cities.Find(CityId);
-            dc.Cities.Remove(city);
+            var city = dc.CityList.Find(CityId);
+            dc.CityList.Remove(city);
         }
 
         public async Task<IEnumerable<City>> GetCitiesAsync()
         {
-            return await dc.Cities.ToListAsync();
+            return await dc.CityList.ToListAsync();
         }
 
         public async Task<City> FindCity(int id)
         {
-            return await dc.Cities.FindAsync(id);
+            return await dc.CityList.FindAsync(id);
         }
     }
 }

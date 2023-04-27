@@ -71,7 +71,7 @@ namespace Web_Api.Data.Repo
 
         public async Task<IEnumerable<City>> test()
         {
-            var user = await dc.Cities.OrderBy(c=>c.Name).ToListAsync();
+            var user = await dc.CityList.OrderBy(c=>c.Name).ToListAsync();
             if (user == null) {
                 return null;
             }
