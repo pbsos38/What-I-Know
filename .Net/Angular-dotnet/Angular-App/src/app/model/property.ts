@@ -1,14 +1,13 @@
 import { IPropertyBase } from './IPropertyBase.interface';
 
 export class Property implements IPropertyBase {
-  readyToMove: boolean;
   id: number;
   sellRent: number;
-  Name: string;
-  PType: string;
-  BHK: number;
-  FType: string;
-  Price: string;
+  name: string;
+  propertyType: string;
+  bhk: number;
+  furnishingType: string;
+  price: string;
   builtArea: number;
   CarpetArea?: number;
   Address: string;
@@ -22,9 +21,10 @@ export class Property implements IPropertyBase {
   Security?: number;
   Gated?: number;
   Maintenance?: number;
-  Possession?: string;
-  Image?: string;
+  estPossessionOn?: string;
+  image?: string;
   Description?: string;
-  PostedOn: string;
-  PostedBy: number;
+  PostedOn?: string;
+  PostedBy?: number;
+  readyToMove:boolean;
 }

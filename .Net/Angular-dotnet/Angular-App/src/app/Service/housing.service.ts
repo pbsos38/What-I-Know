@@ -15,42 +15,46 @@ export class HousingService {
   constructor(private http: HttpClient) { }
 
   getAllListings(sellRent?: number): Observable<Property[]> {
-    return this.http.get('data/list.json').pipe(
-      map(data => {
-        const listArray: Array<Property> = [];
-        const newProperty = JSON.parse(localStorage.getItem('newProp') || '{}');
 
-        if (newProperty) {
-          for (const id in newProperty) {
-            if (sellRent) {
-              if (newProperty.hasOwnProperty(id) && newProperty[id].sellRent === sellRent) {
-                listArray.push(newProperty[id]);
-              }
-            } else {
-              listArray.push(newProperty[id]);
-            }
-          }
-        }
-        // if(newProperty.sellRent===this.sellRent){
-        //   this.list = [newProperty,...this.list];
-        // }
+    return this.http.get<Property[]>(this.baseUrl+"/api/Property/list/"+sellRent?.toString());
 
-        for (const id in data) {
-          if (sellRent) {
-            if (data.hasOwnProperty(id) && data[id].sellRent === sellRent) {
-              listArray.push(data[id]);
-              console.log(listArray);
-            }
-          } else {
-            listArray.push(data[id]);
 
-          }
-        }
-        console.log(listArray);
+    // return this.http.get('data/list.json').pipe(
+    //   map(data => {
+    //     const listArray: Array<Property> = [];
+    //     const newProperty = JSON.parse(localStorage.getItem('newProp') || '{}');
 
-        return listArray;
-      })
-    );
+    //     if (newProperty) {
+    //       for (const id in newProperty) {
+    //         if (sellRent) {
+    //           if (newProperty.hasOwnProperty(id) && newProperty[id].sellRent === sellRent) {
+    //             listArray.push(newProperty[id]);
+    //           }
+    //         } else {
+    //           listArray.push(newProperty[id]);
+    //         }
+    //       }
+    //     }
+    //     // if(newProperty.sellRent===this.sellRent){
+    //     //   this.list = [newProperty,...this.list];
+    //     // }
+
+    //     for (const id in data) {
+    //       if (sellRent) {
+    //         if (data.hasOwnProperty(id) && data[id].sellRent === sellRent) {
+    //           listArray.push(data[id]);
+    //           console.log(listArray);
+    //         }
+    //       } else {
+    //         listArray.push(data[id]);
+
+    //       }
+    //     }
+    //     console.log(listArray);
+
+    //     return listArray;
+    //   })
+    // );
 
   }
 

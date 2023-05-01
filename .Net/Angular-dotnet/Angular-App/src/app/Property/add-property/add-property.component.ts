@@ -23,14 +23,14 @@ export class AddPropertyComponent implements OnInit {
   cityList:any[];
   propertyView: IPropertyBase = {
     id: 0,
-    Name: '',
-    Price: '',
+    name: '',
+    price: '',
     sellRent: 1,
-    PType: '',
-    BHK: 0,
+    propertyType: '',
+    bhk: 0,
     builtArea: 0,
     city: '',
-    FType: '',
+    furnishingType: '',
     RTM: 0,
     readyToMove: true
   };
@@ -147,12 +147,12 @@ export class AddPropertyComponent implements OnInit {
   mapProperty(): void {
     this.property.id = this.housingService.newPropId();
     this.property.sellRent = +this.SellRent.value; // + sign to parse into numberB
-    this.property.BHK = this.BHK.value;
-    this.property.PType = this.PType.value;
-    this.property.Name = this.Name.value;
+    this.property.bhk = this.BHK.value;
+    this.property.propertyType = this.PType.value;
+    this.property.name = this.Name.value;
     this.property.city = this.City.value;
-    this.property.FType = this.FType.value;
-    this.property.Price = this.Price.value;
+    this.property.furnishingType = this.FType.value;
+    this.property.price = this.Price.value;
     this.property.Security = this.Security.value;
     this.property.Maintenance = this.Maintenance.value;
     this.property.builtArea = this.BuiltArea.value;
@@ -165,7 +165,7 @@ export class AddPropertyComponent implements OnInit {
     this.property.AOP = this.AOP.value;
     this.property.Gated = this.Gated.value;
     this.property.MainEntrance = this.MainEntrance.value;
-    this.property.Possession = this.PossessionOn.value;
+    this.property.estPossessionOn = this.PossessionOn.value;
     this.property.Description = this.Description.value;
     this.property.PostedOn = new Date().toString();
   }

@@ -45,7 +45,7 @@
                     class="btn-group"
                     btnRadioGroup
                     formControlName="BHK"
-                    [(ngModel)]="propertyView.BHK"
+                    [(ngModel)]="propertyView.bhk"
                   >
                     <label
                       *ngFor="let bhk of [1, 2, 3, 4]"
@@ -66,7 +66,7 @@
                       class="btn-group"
                       btnRadioGroup
                       formControlName="PType"
-                      [(ngModel)]="propertyView.PType"
+                      [(ngModel)]="propertyView.propertyType"
                     >
                       <label
                         *ngFor="let bhk of propertyTypes"
@@ -89,7 +89,7 @@
                       class="btn-group"
                       btnRadioGroup
                       formControlName="FType"
-                      [(ngModel)]="propertyView.FType"
+                      [(ngModel)]="propertyView.furnishingType"
                     >
                       <label
                         *ngFor="let bhk of furnishedType"
@@ -114,7 +114,7 @@
                     formControlName="Name"
                     required
                     minlength="5"
-                    [(ngModel)]="propertyView.Name"
+                    [(ngModel)]="propertyView.name"
                   />
                   <!-- <span
                     class="error-block"
@@ -174,7 +174,7 @@
                     type="text"
                     class="form-control"
                     formControlName="Price"
-                    [(ngModel)]="propertyView.Price"
+                    [(ngModel)]="propertyView.price"
                   />
                 </div>
 

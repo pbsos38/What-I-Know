@@ -15,7 +15,13 @@ namespace Web_Api.Helpers
             CreateMap<CityUpdateDto, City>();
             
             CreateMap<UserDto, User>();
-            CreateMap<User, UserDto>(); 
+            CreateMap<User, UserDto>();
+
+            CreateMap<Property, PropertyList>()
+                .ForMember(d => d.City, opt => opt.MapFrom(src => src.City.Name))
+                .ForMember(d => d.FurnishingType, opt => opt.MapFrom(src => src.FurnishingType.Name))
+                .ForMember(d => d.PropertyType, opt => opt.MapFrom(src => src.PropertyType.Name))
+                .ForMember(d => d.Country, opt => opt.MapFrom(src => src.City.Country));
         }
     }
 }
