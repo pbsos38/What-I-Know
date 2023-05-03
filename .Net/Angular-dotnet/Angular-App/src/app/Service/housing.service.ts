@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Property } from '../model/property';
 import { environment } from 'src/environments/environment';
+import { iKeyValuePair } from '../model/iKeyValuePair';
 @Injectable({
   providedIn: 'root'
 })
@@ -60,13 +61,18 @@ export class HousingService {
 
 
   getProperty(id: number) {
-    return this.getAllListings().pipe(
-      map(propertyArray => {
-        // throw new Error("some error");
-        return propertyArray.find(p => p.id === id) as Property;
-      })
-    );
+
+
+    return  this.http.get<Property>(this.baseUrl+"/api/Property/list/details/"+id?.toString());
+    // return this.getAllListings().pipe(
+    //   map(propertyArray => {
+    //     // throw new Error("some error");
+    //     return propertyArray.find(p => p.id === id) as Property;
+    //   })
+    // );
   }
+
+
 
   addProperty(property: Property) {
     let newProp: Property[];
@@ -95,4 +101,35 @@ export class HousingService {
     return this.http.get<string[]>(this.baseUrl+'/api/City/cities');
   }
 
+  getPropertyTypes():Observable<iKeyValuePair[]> {
+    return  this.http.get<iKeyValuePair[]>(this.baseUrl+"/api/PropertyType/list/");
+  }
+  getFurnishingTypes():Observable<iKeyValuePair[]> {
+    return  this.http.get<iKeyValuePair[]>(this.baseUrl+"/api/FurnishingType/list/");
+  }
+
+  getPropertyAge(date:Date ):string{
+    const today = new Date();
+        const estDate = new Date(date);
+        let age = today.getFullYear() - estDate.getFullYear();
+        const m = today.getMonth() - estDate.getMonth();
+
+        // Current month smaller than establishment month or
+        // Same month but current date smaller than establishment date
+        if (m < 0 || (m === 0 && today.getDate() < estDate.getDate())) {
+            age --;
+        }
+
+        // Establshment date is future date
+        if(today < estDate) {
+            return '0';
+        }
+
+        // Age is less than a year
+        if(age === 0) {
+            return 'Less than a year';
+        }
+
+        return age.toString();
+  }
 }

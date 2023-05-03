@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Web_Api.Interfaces;
 
@@ -13,10 +14,6 @@ namespace Web_Api.Data.Repo
 
         public DataContext Dc { get; }
 
-        void IPropertyRepository.AddProperty(Property property)
-        {
-            throw new NotImplementedException();
-        }
 
         void IPropertyRepository.DeleteProperty(int id)
         {
@@ -38,6 +35,18 @@ namespace Web_Api.Data.Repo
         void IPropertyRepository.AddProperty(models.Property property)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<models.Property> GetPropertyDetailsAsync(int propertyId)
+        {
+            var property = await (Dc.Properties
+                .Include(p=>p.PropertyType)
+                .Include(p=>p.City)
+                .Include(p=>p.FurnishingType)
+                .Where(p => p.Id == propertyId))
+                .FirstOrDefaultAsync();
+
+            return property;
         }
     }
 }

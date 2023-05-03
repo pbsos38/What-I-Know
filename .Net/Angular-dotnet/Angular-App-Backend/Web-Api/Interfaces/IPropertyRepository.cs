@@ -6,9 +6,10 @@ namespace Web_Api.Interfaces
     public interface IPropertyRepository
     {
         Task<IEnumerable<models.Property>> GetPropertiesAsync(int sellRent);
+        Task<models.Property> GetPropertyDetailsAsync(int propertyId); 
         void AddProperty(models.Property property);
 
         void DeleteProperty(int id);
-        void AddProperty(Microsoft.EntityFrameworkCore.Metadata.Internal.Property property);
+/*        void AddProperty(models.Property property);*/
     }
 }

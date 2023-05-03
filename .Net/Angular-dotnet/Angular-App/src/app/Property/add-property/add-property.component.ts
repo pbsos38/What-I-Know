@@ -6,6 +6,7 @@ import { IPropertyBase } from '../../model/IPropertyBase.interface';
 import { AlertyfyService } from 'src/app/Service/alertyfy.service';
 import { Property } from 'src/app/model/property';
 import { HousingService } from 'src/app/Service/housing.service';
+import { iKeyValuePair } from 'src/app/model/iKeyValuePair';
 @Component({
   selector: 'app-add-property',
   templateUrl: './add-property.component.html',
@@ -16,8 +17,10 @@ export class AddPropertyComponent implements OnInit {
   @ViewChild('formTabs') formTabs?: TabsetComponent;
 
   addPropertyForm: FormGroup;
-  propertyTypes: Array<String> = ['House', 'Apartment', 'Duplex'];
-  furnishedType: Array<String> = ['Fully', 'Semi', 'Unfurnished'];
+  // propertyTypes: Array<String> = ['House', 'Apartment', 'Duplex'];
+  // furnishedType: Array<String> = ['Fully', 'Semi', 'Unfurnished'];
+  propertyTypes: iKeyValuePair[];
+  furnishedType: iKeyValuePair[];
   NextClicked: boolean;
   property= new Property();
   cityList:any[];
@@ -32,7 +35,8 @@ export class AddPropertyComponent implements OnInit {
     city: '',
     furnishingType: '',
     RTM: 0,
-    readyToMove: true
+    readyToMove: true,
+    estPossessionOn:''
   };
 
   constructor(private fb: FormBuilder, private route: Router,
@@ -49,6 +53,14 @@ export class AddPropertyComponent implements OnInit {
     this.createAddPropertyForm();
     this.housingService.getAllCities().subscribe(data =>{
       this.cityList = data;
+      console.log(data);
+    })
+    this.housingService.getPropertyTypes().subscribe(data =>{
+      this.propertyTypes = data;
+      console.log(data);
+    })
+    this.housingService.getFurnishingTypes().subscribe(data =>{
+      this.furnishedType = data;
       console.log(data);
     })
   }
@@ -116,6 +128,7 @@ export class AddPropertyComponent implements OnInit {
   }
 
   selectTab(tabId: number, IsCurrentTabValid?: boolean) {
+    console.log(this.City.value)
     this.NextClicked = true;
     if (this.formTabs?.tabs[tabId] && IsCurrentTabValid) {
       this.formTabs.tabs[tabId].active = true;
@@ -153,20 +166,20 @@ export class AddPropertyComponent implements OnInit {
     this.property.city = this.City.value;
     this.property.furnishingType = this.FType.value;
     this.property.price = this.Price.value;
-    this.property.Security = this.Security.value;
-    this.property.Maintenance = this.Maintenance.value;
+    this.property.security = this.Security.value;
+    this.property.maintenance = this.Maintenance.value;
     this.property.builtArea = this.BuiltArea.value;
-    this.property.CarpetArea = this.CarpetArea.value;
-    this.property.FloorNo = this.FloorNo.value;
-    this.property.TotalFloor = this.TotalFloor.value;
-    this.property.Address = this.Address.value;
-    this.property.Address2 = this.LandMark.value;
+    this.property.carpetArea = this.CarpetArea.value;
+    this.property.floorNo = this.FloorNo.value;
+    this.property.totalFloors = this.TotalFloor.value;
+    this.property.address = this.Address.value;
+    this.property.address2 = this.LandMark.value;
     this.property.RTM = this.RTM.value;
     this.property.AOP = this.AOP.value;
-    this.property.Gated = this.Gated.value;
-    this.property.MainEntrance = this.MainEntrance.value;
+    this.property.gated = this.Gated.value;
+    this.property.mainEntrance = this.MainEntrance.value;
     this.property.estPossessionOn = this.PossessionOn.value;
-    this.property.Description = this.Description.value;
+    this.property.description = this.Description.value;
     this.property.PostedOn = new Date().toString();
   }
 
